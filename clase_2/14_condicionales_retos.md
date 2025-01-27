@@ -55,3 +55,56 @@ Crea un juego de Piedra, Papel o Tijera donde el usuario juegue contra la comput
 - La computadora debe elegir aleatoriamente
 - El programa debe mostrar quién ganó y por qué
 - Debe validar que el usuario ingrese una opción válida
+
+```python
+# Solución: Piedra, Papel o Tijera
+import random
+
+# Mostramos las opciones al usuario
+print("Juguemos a Piedra, Papel o Tijera!")
+print("1. Piedra")
+print("2. Papel")
+print("3. Tijera")
+
+# Obtenemos la elección del usuario
+eleccion_usuario = input("Elige tu opción (1-3): ")
+
+# Validamos la entrada del usuario
+if eleccion_usuario == "1" or eleccion_usuario == "2" or eleccion_usuario == "3":
+    # Convertimos la elección a número
+    eleccion_usuario = int(eleccion_usuario)
+
+    # Generamos la elección de la computadora (1, 2 o 3)
+    eleccion_computadora = random.randint(1, 3)
+
+    # Mostramos la elección del usuario
+    if eleccion_usuario == 1:
+        print("\nTú elegiste: Piedra")
+    elif eleccion_usuario == 2:
+        print("\nTú elegiste: Papel")
+    else:
+        print("\nTú elegiste: Tijera")
+
+    # Mostramos la elección de la computadora
+    if eleccion_computadora == 1:
+        print("La computadora eligió: Piedra")
+    elif eleccion_computadora == 2:
+        print("La computadora eligió: Papel")
+    else:
+        print("La computadora eligió: Tijera")
+
+    # Determinamos el ganador
+    if eleccion_usuario == eleccion_computadora:
+        print("\n¡Empate!")
+    elif eleccion_usuario == 1 and eleccion_computadora == 3:
+        print("\n¡Ganaste! Piedra vence a Tijera")
+    elif eleccion_usuario == 2 and eleccion_computadora == 1:
+        print("\n¡Ganaste! Papel vence a Piedra")
+    elif eleccion_usuario == 3 and eleccion_computadora == 2:
+        print("\n¡Ganaste! Tijera vence a Papel")
+    else:
+        print("\n¡La computadora gana!")
+
+else:
+    print("¡Opción no válida! Debes elegir 1, 2 o 3")
+```
