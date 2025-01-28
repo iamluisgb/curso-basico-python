@@ -41,9 +41,11 @@
 - [Corey Schafer](https://www.youtube.com/user/schafer5) - Tutoriales avanzados
 - [Real Python](https://www.youtube.com/channel/UCI0vQvr9aFn27yR6Ej6n5UA) - Canal oficial de Real Python
 - [Sentdex](https://www.youtube.com/user/sentdex) - Proyectos prácticos
+- [Mouredev](https://www.youtube.com/@mouredev) -  Tutoriales en español
 
 ## 📖 Libros
 - [Automate the Boring Stuff](https://automatetheboringstuff.com/) - Python práctico
+- [El Libro de Python ](https://ellibrodepython.com/) - Libro en español
 - [Python for Everybody](https://www.py4e.com/book) - Libro gratuito completo
 - [Think Python](https://greenteapress.com/wp/think-python-2e/) - Introducción a Python
 - [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) - Python para datos
