@@ -340,3 +340,184 @@ Segundo número: 27
 
 ¿Deseas continuar? (s/n): s
 ```
+
+## Soluciones
+
+## Ejercicio 1: Conversor de Temperatura
+
+```python
+def validar_temperatura(celsius):
+    """Valida que la temperatura no esté por debajo del cero absoluto."""
+    if celsius < -273.15:
+        print("❌ Error: La temperatura está por debajo del cero absoluto (-273.15°C)")
+        return False
+    return True
+
+def convertir_celsius_a_fahrenheit(celsius):
+    """Convierte la temperatura de Celsius a Fahrenheit."""
+    return (celsius * 9/5) + 32
+
+def main():
+    print("=== CONVERSOR DE TEMPERATURA ===")
+
+    try:
+        # Solicitar la temperatura en Celsius
+        celsius = float(input("Ingresa la temperatura en Celsius: "))
+
+        # Validar la temperatura
+        if not validar_temperatura(celsius):
+            return  # Terminar si la temperatura no es válida
+
+        # Realizar la conversión
+        fahrenheit = convertir_celsius_a_fahrenheit(celsius)
+        print(f"✅ {celsius}°C = {fahrenheit}°F")
+
+    except ValueError:
+        print("❌ Error: Debes ingresar un número válido")
+    finally:
+        print("🔚 Conversión finalizada")
+
+# Llamar a la función principal
+main()
+```
+
+## Ejercicio 2: Registro de Usuario
+
+```python
+def validar_nombre(nombre):
+    """Valida que el nombre no esté vacío."""
+    if nombre == "":
+        print("❌ Error: El nombre no puede estar vacío")
+        return False
+    return True
+
+def validar_edad(edad):
+    """Valida que la edad esté dentro de un rango razonable."""
+    if edad < 0 or edad > 120:
+        print("❌ Error: La edad debe estar entre 0 y 120 años")
+        return False
+    return True
+
+def validar_email(email):
+    """Valida que el email tenga un formato básico."""
+    if "@" not in email or "." not in email:
+        print("❌ Error: Email inválido. Debe contener '@' y '.'")
+        return False
+    return True
+
+def main():
+    print("=== SISTEMA DE REGISTRO ===")
+
+    try:
+        # Pedir el nombre
+        nombre = input("Nombre: ").strip()
+        if not validar_nombre(nombre):
+            return  # Terminar si el nombre no es válido
+
+        # Pedir la edad
+        edad = int(input("Edad: "))
+        if not validar_edad(edad):
+            return  # Terminar si la edad no es válida
+
+        # Pedir el email
+        email = input("Email: ").strip()
+        if not validar_email(email):
+            return  # Terminar si el email no es válido
+
+        # Si todo está bien, mostrar los datos
+        print("\n✅ Usuario registrado correctamente:")
+        print(f"- Nombre: {nombre}")
+        print(f"- Edad: {edad}")
+        print(f"- Email: {email}")
+
+    except ValueError:
+        print("❌ Error: La edad debe ser un número")
+    finally:
+        print("\n🔚 Proceso de registro finalizado")
+
+# Llamar a la función principal
+main()
+```
+
+## Ejercicio 3: Calculadora Básica
+
+```python
+def mostrar_menu():
+    """Muestra el menú de opciones de la calculadora."""
+    print("=== CALCULADORA BÁSICA ===")
+    print("1. Suma (+)")
+    print("2. Resta (-)")
+    print("3. Multiplicación (*)")
+    print("4. División (/)")
+    print("5. Potencia (**)")
+    print("6. Raíz cuadrada (√)")
+
+def validar_opcion(opcion):
+    """Valida que la opción esté dentro del rango permitido (1-6)."""
+    if opcion < 1 or opcion > 6:
+        print("❌ Error: Opción inválida")
+        return False
+    return True
+
+def realizar_operacion(opcion, num1=None, num2=None):
+    """Realiza la operación seleccionada y muestra el resultado."""
+    if opcion == 1:
+        resultado = num1 + num2
+        print(f"\n✅ Resultado: {num1} + {num2} = {resultado}")
+
+    elif opcion == 2:
+        resultado = num1 - num2
+        print(f"\n✅ Resultado: {num1} - {num2} = {resultado}")
+
+    elif opcion == 3:
+        resultado = num1 * num2
+        print(f"\n✅ Resultado: {num1} * {num2} = {resultado}")
+
+    elif opcion == 4:
+        if num2 == 0:
+            print("❌ Error: No se puede dividir por cero")
+        else:
+            resultado = num1 / num2
+            print(f"\n✅ Resultado: {num1} / {num2} = {resultado:.2f}")
+
+    elif opcion == 5:
+        resultado = num1 ** num2
+        print(f"\n✅ Resultado: {num1} ** {num2} = {resultado}")
+
+    elif opcion == 6:
+        if num1 < 0:
+            print("❌ Error: No se puede calcular la raíz cuadrada de un número negativo")
+        else:
+            resultado = num1 ** 0.5
+            print(f"\n✅ Resultado: √{num1} = {resultado:.2f}")
+
+def main():
+    mostrar_menu()
+
+    try:
+        # Pedir la opción al usuario
+        opcion = int(input("\nElige una opción (1-6): "))
+
+        # Validar la opción
+        if not validar_opcion(opcion):
+            return  # Terminar si la opción no es válida
+
+        # Pedir números según la opción
+        if opcion != 6:
+            num1 = float(input("Primer número: "))
+            num2 = float(input("Segundo número: "))
+        else:
+            num1 = float(input("Número: "))
+            num2 = None  # No se necesita un segundo número para la raíz cuadrada
+
+        # Realizar la operación
+        realizar_operacion(opcion, num1, num2)
+
+    except ValueError:
+        print("❌ Error: Debes ingresar números válidos")
+    finally:
+        print("\n🔚 Operación finalizada")
+
+# Llamar a la función principal
+main()
+```
