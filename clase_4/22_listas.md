@@ -158,7 +158,18 @@ Crea una lista de 5 artículos de supermercado. Después:
 3. Muestra cuántos artículos hay en total
 
 ```python
-# Escribe tu solución aquí
+# Creamos la lista inicial
+compras = ["leche", "pan", "huevos", "manzanas", "arroz"]
+
+# Mostramos primer y último elemento
+print(f"Primer artículo: {compras[0]}")
+print(f"Último artículo: {compras[-1]}")
+
+# Agregamos un nuevo artículo
+compras.append("yogur")
+
+# Mostramos el total de artículos
+print(f"Total de artículos: {len(compras)}")
 ```
 
 ### Ejercicio 2: "Las Temperaturas"
@@ -170,7 +181,18 @@ Tienes una lista con las temperaturas de la semana en grados:
 3. Modifica la temperatura del primer día a 18 grados
 
 ```python
-# Escribe tu solución aquí
+# Lista de temperaturas
+temperaturas = [21, 24, 19, 25, 22, 20, 23]
+
+# Mostramos temperatura más alta y más baja
+maxima = max(temperaturas)
+minima = min(temperaturas)
+print(f"Temperatura más alta: {maxima}°")
+print(f"Temperatura más baja: {minima}°")
+
+# Modificamos la primera temperatura
+temperaturas[0] = 18
+print(f"Temperaturas actualizadas: {temperaturas}")
 ```
 
 ### Ejercicio 3: "Lista de Amigos"
@@ -180,7 +202,17 @@ Crea una lista con los nombres de 4 amigos. Después:
 3. Muestra el total de amigos
 
 ```python
-# Escribe tu solución aquí
+# Lista inicial
+amigos = ["Ana", "Juan", "María", "Carlos"]
+
+# Agregamos amigo al inicio
+amigos.insert(0, "Pedro")
+
+# Agregamos amigo al final
+amigos.append("Laura")
+
+# Total de amigos
+print(f"Mis {len(amigos)} amigos son: {amigos}")
 ```
 
 ## Ejercicios Nivel Intermedio 🌿
@@ -194,17 +226,18 @@ Tienes una lista de puntajes de un torneo:
 3. Muestra los puntajes de manera ordenada
 
 ```python
-# Escribe tu solución aquí
-```
+# Lista de puntajes
+puntajes = [85, 92, 78, 95, 88]
 
-### Ejercicio 5: "Agenda Telefónica"
-Crea dos listas: una con nombres y otra con teléfonos:
-1. Agrega 3 contactos a cada lista
-2. Muestra el teléfono del segundo contacto
-3. Agrega un contacto más a ambas listas
+# Tres primeros puntajes
+print(f"Primeros tres: {puntajes[0:3]}")
 
-```python
-# Escribe tu solución aquí
+# Agregamos nuevo puntaje
+puntajes.append(90)
+
+# Ordenamos y mostramos
+puntajes.sort()
+print(f"Puntajes ordenados: {puntajes}")
 ```
 
 ## 8. Tips y Consejos
