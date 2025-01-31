@@ -211,3 +211,112 @@ del frutas
   ```
 
 ---
+
+## 💻 Ejercicios
+
+### Ejercicios: Nivel 1
+
+1. Crea una tupla vacía.
+2. Crea una tupla que contenga los nombres de tus hermanas y tus hermanos (los hermanos imaginarios están bien).
+3. Une las tuplas de hermanos y hermanas y asígnala a `siblings`.
+4. ¿Cuántos hermanos tienes?
+5. Modifica la tupla `siblings` y añade el nombre de tu padre y tu madre, luego asígnala a `family_members`.
+
+### Ejercicios: Nivel 2
+
+1. Desempaqueta los hermanos y los padres de `family_members`.
+2. Crea tuplas de frutas, vegetales y productos animales. Une las tres tuplas y asígnala a una variable llamada `food_stuff_tp`.
+3. Cambia la tupla `food_stuff_tp` a una lista `food_stuff_lt`.
+4. Extrae el elemento o elementos del medio de la tupla `food_stuff_tp` o de la lista `food_stuff_lt`.
+5. Extrae los primeros tres elementos y los últimos tres elementos de la lista `food_stuff_lt`.
+6. Elimina completamente la tupla `food_stuff_tp`.
+7. Verifica si un elemento existe en una tupla:
+   - Verifica si 'Estonia' es un país nórdico.
+   - Verifica si 'Islandia' es un país nórdico.
+
+  ```py
+  nordic_countries = ('Dinamarca', 'Finlandia', 'Islandia', 'Noruega', 'Suecia')
+  ```
+
+---
+
+### **Soluciones a los ejercicios:**
+
+#### **Ejercicios: Nivel 1**
+
+1. **Crear una tupla vacía:**
+   ```py
+   tupla_vacia = ()
+   ```
+
+2. **Crear una tupla con nombres de hermanos y hermanas:**
+   ```py
+   hermanos = ('Ana', 'Luis', 'Marta')
+   hermanas = ('Sofía', 'Lucía')
+   ```
+
+3. **Unir las tuplas de hermanos y hermanas:**
+   ```py
+   siblings = hermanos + hermanas
+   ```
+
+4. **Contar el número de hermanos:**
+   ```py
+   num_siblings = len(siblings)
+   print(num_siblings)  # Salida: 5
+   ```
+
+5. **Modificar la tupla `siblings` y añadir padres:**
+   ```py
+   family_members = siblings + ('Padre', 'Madre')
+   print(family_members)  # Salida: ('Ana', 'Luis', 'Marta', 'Sofía', 'Lucía', 'Padre', 'Madre')
+   ```
+
+#### **Ejercicios: Nivel 2**
+
+1. **Desempaquetar hermanos y padres:**
+   ```py
+   *siblings, padre, madre = family_members
+   print(siblings)  # Salida: ['Ana', 'Luis', 'Marta', 'Sofía', 'Lucía']
+   print(padre)     # Salida: 'Padre'
+   print(madre)     # Salida: 'Madre'
+   ```
+
+2. **Crear tuplas de frutas, vegetales y productos animales:**
+   ```py
+   frutas = ('manzana', 'banana', 'naranja')
+   vegetales = ('zanahoria', 'papa', 'cebolla')
+   productos_animales = ('leche', 'huevos', 'queso')
+   food_stuff_tp = frutas + vegetales + productos_animales
+   ```
+
+3. **Cambiar la tupla a lista:**
+   ```py
+   food_stuff_lt = list(food_stuff_tp)
+   ```
+
+4. **Extraer el elemento del medio:**
+   ```py
+   middle_item = food_stuff_lt[len(food_stuff_lt) // 2]
+   print(middle_item)  # Salida: 'papa'
+   ```
+
+5. **Extraer los primeros tres y los últimos tres elementos:**
+   ```py
+   primeros_tres = food_stuff_lt[:3]
+   ultimos_tres = food_stuff_lt[-3:]
+   print(primeros_tres)  # Salida: ['manzana', 'banana', 'naranja']
+   print(ultimos_tres)   # Salida: ['leche', 'huevos', 'queso']
+   ```
+
+6. **Eliminar la tupla `food_stuff_tp`:**
+   ```py
+   del food_stuff_tp
+   ```
+
+7. **Verificar si un elemento existe en una tupla:**
+   ```py
+   nordic_countries = ('Dinamarca', 'Finlandia', 'Islandia', 'Noruega', 'Suecia')
+   print('Estonia' in nordic_countries)  # Salida: False
+   print('Islandia' in nordic_countries) # Salida: True
+   ```
