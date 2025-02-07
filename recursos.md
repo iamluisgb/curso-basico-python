@@ -56,6 +56,7 @@
 - [Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) - Para análisis de datos
 - [NumPy Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf) - Computación numérica
 
+
 ## 🤝 Comunidad
 - [Python Discord](https://discord.gg/python) - Chat de la comunidad
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/python) - Preguntas y respuestas
@@ -67,5 +68,6 @@
 - [Python Weekly](https://www.pythonweekly.com/) - Newsletter semanal
 - [Full Stack Python](https://www.fullstackpython.com/) - Recursos para desarrollo
 - [Python Tips](https://book.pythontips.com/) - Consejos y trucos
+- [Python Roadmap](https://roadmap.sh/python) - Roadmap detallado de Python
 
 ---
