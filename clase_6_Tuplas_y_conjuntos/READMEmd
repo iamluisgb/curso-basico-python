@@ -1,0 +1,9 @@
+## Objetivos de Aprendizaje
+
+- Dominar operaciones básicas con tuplas (creación, acceso, desempaquetado)
+- Entender la inmutabilidad y sus ventajas
+- Aplicar métodos de tuplas
+- Implementar operaciones con sets (add, remove, unión, intersección)
+- Utilizar sets para eliminar duplicados
+- Entender performance y casos de uso para cada estructura
+- Aplicar tuplas y sets en problemas prácticos
